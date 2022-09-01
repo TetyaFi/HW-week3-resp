@@ -1,11 +1,18 @@
 :root {
-  --primary-color: #6c63ff;
+  --primary-color: #ff0000;
   --secondary-color: #f5f2fe;
   --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 body {
   margin: 100px 0;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) -10%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 0, 0, 1) 100%
+  );
 }
 
 h1,
@@ -30,6 +37,12 @@ h3 {
 p {
   font-size: 18px;
   line-height: 1.5;
+  padding: 7px 0;
+}
+
+.hero {
+  text-align: center;
+  padding: 80px 20px 20px 20px;
 }
 
 .navigation-links {
@@ -53,7 +66,7 @@ p {
 }
 
 .primary-link:hover {
-  color: white;
+  color: rgb(14, 0, 0);
 }
 
 .secondary-link {
@@ -89,6 +102,7 @@ p {
 
 .email-link:hover {
   text-decoration: underline;
+  color: black;
 }
 
 @media (max-width: 576px) {
@@ -111,4 +125,19 @@ p {
     text-align: center;
     margin: 0 20px;
   }
+}
+
+footer .social-links a {
+  margin: 5px 20px;
+  color: var(--branding-color);
+  background: var(--secondary-color);
+  padding: 26px 40px;
+  border-radius: 50%;
+  font-size: 38px;
+  transition: all 100ms ease-in-out;
+}
+
+footer .social-links a:hover {
+  color: rgb(248, 95, 95);
+  background: var(--branding-color);
 }
